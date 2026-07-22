@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+  .hero-title { font-size: 3.5rem; }
+  .hero-subtitle { font-size: 1.4rem; }
+  .hero-image { width: 140px; height: 140px; }
+  .section { padding: 2rem 1rem; }
+  .section-title { font-size: 2.2rem; }
+  .review-item {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+  }
+  .review-item span:first-child { font-weight: 600; }
+  .bar { height: 8px; }
+  .messages-grid { grid-template-columns: 1fr; }
+  .gallery-card { flex: 0 0 200px; }
+  .gallery-card img { height: 150px; }
+  .gallery-btn { width: 36px; height: 36px; font-size: 1.5rem; }
+  .game-display { font-size: 2rem; min-height: 70px; }
+  .game-controls input { min-width: 100px; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 2.8rem; }
+  .hero-subtitle { font-size: 1.2rem; }
+  .hero-image { width: 120px; height: 120px; }
+  .game-stats { flex-direction: column; align-items: center; gap: 0.3rem; }
+  .game-controls { flex-direction: column; }
+  .game-controls input { width: 100%; }
+}
+
+
+url: https://tfqdmuwnphswcbwvigne.supabase.co
+anon: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRmcWRtdXducGhzd2Nid3ZpZ25lIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ2ODU0NzUsImV4cCI6MjEwMDI2MTQ3NX0.q_ausmW3lE5-BLfoslbiEcBhmRDdCqofbHiHUD4_UT0

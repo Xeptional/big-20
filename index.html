@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 20th Birthday, Sarah!</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ====== HERO ====== -->
+  <header class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Happy Birthday Shukroh!</h1>
+      <p class="hero-subtitle">Maybe I'll concede that you're a big girl now.</p>
+      <div class="hero-image">
+        <img src="assets/images/hero.jpg" alt="Sarah" />
+        <div class="hero-glow"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== BIRTHDAY MESSAGE ====== -->
+  <section class="section message-section" id="message">
+    <div class="card message-card">
+      <p class="message-greeting">Fine girl,</p>
+      <p class="message-text">
+        We've known each other for a short while and you have been a huge blessing.
+      </p>
+      <p class="message-text">
+        You are kind, caring, "gentle", your laughter is contagious, you are fun to be around,
+        and most importantly, You love God.
+      </p>
+      <p class="message-text">
+        I want to see you leap beyond your imaginations, break limits, surpass expectations, and achieve successes, leaving peaple in awe.
+      </p>
+      <p class="message-text">
+        I want to be there to watch you shine so bright, even the sun gets jealous
+      </p>
+      <p class="message-text">
+        As you celebrate today, I wish you enduring love, illuminating light, unending bliss, and longggggg money 
+      </p>
+
+      </p>
+      <p class="message-signature">— BIM ❤️</p>
+    </div>
+  </section>
+
+  <!-- ====== PRODUCT REVIEW ====== -->
+  <section class="section review-section" id="review">
+    <h2 class="section-title">Official Product Review</h2>
+    <p class="review-subtitle">Product Name: Shukroh™ Premium Human &nbsp;·&nbsp; Version: 20.00</p>
+    <div class="review-grid">
+      <div class="review-item"><span>Loving</span><div class="bar"><div class="bar-fill" data-width="100"></div></div><span>100%</span></div>
+      <div class="review-item"><span>Goofy</span><div class="bar"><div class="bar-fill" data-width="92"></div></div><span>92%</span></div>
+      <div class="review-item"><span>Beauty</span><div class="bar"><div class="bar-fill" data-width="100"></div></div><span>100%</span><span class="review-note">God Dayummm!!!</span></div>
+      <div class="review-item"><span>Kindness</span><div class="bar"><div class="bar-fill" data-width="100"></div></div><span>100%</span></div>
+      <div class="review-item"><span>Patience</span><div class="bar"><div class="bar-fill" data-width="64"></div></div><span>64%</span></div>
+      <div class="review-item"><span>Annoying</span><div class="bar"><div class="bar-fill" data-width="100"></div></div><span>1000%</span><span class="review-note">Oh Chim!</span></div>
+      <div class="review-item"><span>Food Stealing</span><div class="bar"><div class="bar-fill" data-width="81"></div></div><span>81%</span></div>
+      <div class="review-item"><span>Sleepiness</span><div class="bar"><div class="bar-fill" data-width="100"></div></div><span>100%</span></div>
+      <div class="review-item"><span>Drama</span><div class="bar"><div class="bar-fill" data-width="80"></div></div><span>80%</span></div>
+      <div class="review-item"><span>Laugh</span><div class="bar"><div class="bar-fill" data-width="100"></div></div><span>100%</span></div>
+      <div class="review-item"><span>Overthinking</span><div class="bar"><div class="bar-fill" data-width="57"></div></div><span>57%</span></div>
+    </div>
+    <div class="review-overall">
+      <span class="stars">⭐⭐⭐⭐⭐</span>
+      <span class="overall-score">10/10 – Would celebrate again.</span>
+    </div>
+  </section>
+
+  <!-- ====== FRIENDS MESSAGES ====== -->
+  <section class="section messages-section" id="messages">
+    <h2 class="section-title">Birthday Wishes</h2>
+    <div class="messages-grid" id="messagesGrid">
+      <!-- dynamically loaded from Supabase -->
+    </div>
+    <div class="drop-message-cta">
+      <a href="leave-message.html" class="btn-secondary">Drop a Birthday Message ❤️</a>
+    </div>
+  </section>
+
+  <!-- ====== GALLERY ====== -->
+  <section class="section gallery-section" id="gallery">
+    <h2 class="section-title">Memories</h2>
+    <div class="gallery-wrapper">
+      <button class="gallery-btn gallery-prev" aria-label="Previous">‹</button>
+      <div class="gallery-track" id="galleryTrack">
+        <!-- images will be cloned dynamically; static placeholders shown -->
+        <div class="gallery-card"><img src="assets/images/gallery/01.jpg" alt="Memory 1" /></div>
+        <div class="gallery-card"><img src="assets/images/gallery/02.jpg" alt="Memory 2" /></div>
+        <div class="gallery-card"><img src="assets/images/gallery/03.jpg" alt="Memory 3" /></div>
+        <div class="gallery-card"><img src="assets/images/gallery/04.jpg" alt="Memory 4" /></div>
+        <div class="gallery-card"><img src="assets/images/gallery/05.jpg" alt="Memory 5" /></div>
+        <div class="gallery-card"><img src="assets/images/gallery/06.jpg" alt="Memory 5" /></div>
+      </div>
+      <button class="gallery-btn gallery-next" aria-label="Next">›</button>
+    </div>
+  </section>
+
+  <!-- ====== MEMORY SPRINT GAME ====== -->
+  <section class="section game-section" id="game">
+    <h2 class="section-title">Memory Sprint</h2>
+    <div class="game-container">
+      <div class="game-instructions">
+        <p><strong>HOW TO PLAY</strong></p>
+        <ul>
+          <li>Watch the sequence.</li>
+          <li>Memorize it.</li>
+          <li>Once it disappears, type it exactly.</li>
+          <li>Every correct answer increases your level.</li>
+          <li>Every few levels, the sequence gets longer and display time shorter.</li>
+          <li>The game never ends – see how far your memory can take you!</li>
+        </ul>
+      </div>
+      <div class="game-stats">
+        <span>Level: <strong id="gameLevel">0</strong></span>
+        <span>Score: <strong id="gameScore">0</strong></span>
+        <span>Best: <strong id="gameBest">0</strong></span>
+      </div>
+      <div class="game-display" id="gameDisplay">Press "New Round" to start</div>
+      <div class="game-controls">
+        <input type="text" id="gameInput" placeholder="Type sequence..." autocomplete="off" />
+        <button id="gameSubmit">Submit</button>
+        <button id="gameNewRound">New Round</button>
+      </div>
+      <div id="gameFeedback" class="game-feedback"></div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <p>Made with ❤️ for Shukroh</p>
+    <p><a href="leave-message.html">Leave a birthday wish</a></p>
+  </footer>
+
+  <!-- ====== SCRIPTS ====== -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/messages.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/likes.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

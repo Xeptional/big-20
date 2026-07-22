@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leave a Birthday Wish</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Manrope:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <main class="leave-message-page">
+    <div class="card message-form-card" id="messageFormCard">
+      <h1>Leave a Birthday Message</h1>
+      <form id="messageForm">
+        <label for="senderName">Your Name</label>
+        <input type="text" id="senderName" maxlength="25" required placeholder="Your name" />
+
+        <label for="messageText">Your Birthday Message</label>
+        <textarea id="messageText" maxlength="300" required placeholder="Write your wish..." rows="4"></textarea>
+
+        <button type="submit" id="sendButton">Send Message</button>
+        <div id="formFeedback" class="form-feedback"></div>
+      </form>
+    </div>
+    <div class="card thank-you-card" id="thankYouCard" style="display:none;">
+      <p>Thank you ❤️</p>
+      <p>Your birthday message has been added.</p>
+      <a href="index.html" class="btn-primary">View Birthday Website →</a>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/submit-message.js"></script>
+</body>
+</html>
