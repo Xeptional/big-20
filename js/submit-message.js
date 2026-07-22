@@ -32,11 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    // Check if client exists
+    if (!window.supabaseClient) {
+      feedback.textContent = '❌ Database client not loaded. Please refresh and try again.';
+      return;
+    }
+
     sendBtn.disabled = true;
     sendBtn.textContent = 'Sending...';
 
     try {
-      const { data, error } = await supabase
+      const { data, error } = await window.supabaseClient
         .from('messages')
         .insert([{ name, message }]);
 
@@ -47,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
       thankYou.style.display = 'block';
     } catch (err) {
       console.error('Submit error:', err);
-      // Show the actual Supabase error message (e.g., "column does not exist", "permission denied")
       const errorMsg = err.message || 'Unknown error. Check console.';
       feedback.textContent = `❌ Error: ${errorMsg}`;
       feedback.style.color = '#E88D7A';

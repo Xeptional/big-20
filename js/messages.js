@@ -2,11 +2,16 @@ document.addEventListener('DOMContentLoaded', async () => {
   const grid = document.getElementById('messagesGrid');
   if (!grid) return;
 
-  // Show loading with gold accent
+  // Check if client exists
+  if (!window.supabaseClient) {
+    grid.innerHTML = `<p style="color: #E88D7A; text-align: center;">Database client not loaded. Refresh the page.</p>`;
+    return;
+  }
+
   grid.innerHTML = `<p style="color: #D4B26A; text-align: center;">Loading...</p>`;
 
   try {
-    const { data, error } = await supabase
+    const { data, error } = await window.supabaseClient
       .from('messages')
       .select('*')
       .order('created_at', { ascending: false });
@@ -48,8 +53,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   } catch (err) {
     console.error('Error loading messages:', err);
-    // 🔥 removed the user-facing error message – just leave the grid empty or show nothing
-    grid.innerHTML = ''; // completely empty so nothing scary appears
+    // Silent fail – no scary message for users
+    grid.innerHTML = '';
   }
 });
 
