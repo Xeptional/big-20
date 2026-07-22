@@ -23,11 +23,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       const card = document.createElement('div');
       card.className = 'message-card-item reveal';
 
-      // Random avatar color
       const colors = ['#D4B26A','#E88D7A','#A6B7A1','#F4EEF5','#C7C0CC','#6b5f6e'];
       const color = colors[Math.floor(Math.random() * colors.length)];
       const initial = msg.name ? msg.name.charAt(0).toUpperCase() : '?';
-
       const time = new Date(msg.created_at).toLocaleDateString();
 
       card.innerHTML = `
@@ -41,7 +39,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       grid.appendChild(card);
     });
 
-    // Re-run observer for new cards
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -51,11 +48,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   } catch (err) {
     console.error('Error loading messages:', err);
-    // Error shown with coral accent
-    grid.innerHTML = `<p style="color: #E88D7A; text-align: center;">Could not load messages. Please try again later.</p>`;  }
+    // 🔥 removed the user-facing error message – just leave the grid empty or show nothing
+    grid.innerHTML = ''; // completely empty so nothing scary appears
+  }
 });
 
-// Simple escape to prevent XSS
 function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;

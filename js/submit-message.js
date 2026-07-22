@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Basic client-side validation
     if (name.length > 25) {
       feedback.textContent = 'Name must be 25 characters or less.';
       return;
@@ -28,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
       feedback.textContent = 'Message must be 300 characters or less.';
       return;
     }
-    // Prevent HTML/links (basic)
     if (/<[^>]*>/.test(message) || /https?:\/\/|www\./i.test(message)) {
       feedback.textContent = 'Please avoid HTML or links.';
       return;
@@ -38,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sendBtn.textContent = 'Sending...';
 
     try {
-      const { error } = await supabase
+      const { data, error } = await supabase
         .from('messages')
         .insert([{ name, message }]);
 
@@ -48,8 +46,11 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.display = 'none';
       thankYou.style.display = 'block';
     } catch (err) {
-      console.error(err);
-      feedback.textContent = 'Something went wrong. Please try again later.';
+      console.error('Submit error:', err);
+      // Show the actual Supabase error message (e.g., "column does not exist", "permission denied")
+      const errorMsg = err.message || 'Unknown error. Check console.';
+      feedback.textContent = `❌ Error: ${errorMsg}`;
+      feedback.style.color = '#E88D7A';
       sendBtn.disabled = false;
       sendBtn.textContent = 'Send Message';
     }
